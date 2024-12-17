@@ -301,3 +301,32 @@ spec:
         description: The main URI in which this Service is serving traffic.
       - name: traffic_statuses
         description: Detailed status information for corresponding traffic targets.
+  requirements:
+    roles:
+      - level: Project
+        roles:
+          - roles/owner
+      - level: Project
+        roles:
+          - roles/accesscontextmanager.policyAdmin
+          - roles/orgpolicy.policyAdmin
+      - level: Project
+        roles:
+          - roles/resourcemanager.folderAdmin
+          - roles/resourcemanager.projectCreator
+          - roles/resourcemanager.projectDeleter
+    services:
+      - cloudresourcemanager.googleapis.com
+      - storage-api.googleapis.com
+      - serviceusage.googleapis.com
+      - run.googleapis.com
+      - cloudkms.googleapis.com
+      - iam.googleapis.com
+      - accesscontextmanager.googleapis.com
+      - cloudbilling.googleapis.com
+      - monitoring.googleapis.com
+    providerVersions:
+      - source: hashicorp/google
+        version: ">= 6, < 7"
+      - source: hashicorp/google-beta
+        version: ">= 6, < 7"
