@@ -23,7 +23,7 @@ spec:
     title: Cloud Run v2 Service
     source:
       repo: https://github.com/GoogleCloudPlatform/terraform-google-cloud-run/blob/main/modules/v2
-    version: 0.15.4
+    version: 0.15.5
     actuationTool:
       flavor: Terraform
       version: ">= 1.3"
